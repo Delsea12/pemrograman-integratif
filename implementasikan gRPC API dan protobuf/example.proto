@@ -1,0 +1,20 @@
+// untuk inisialisasi data dan functionnya
+// struktur data untuk server dan client
+syntax = "proto3";
+
+package mypackage;
+
+// mendefinisikan struktur
+message Data {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+// define
+service DataService {
+  rpc CreateData(Data) returns (Data) {}
+  rpc ReadData(Data) returns (Data) {}
+  rpc UpdateData(Data) returns (Data) {}
+  rpc DeleteData(Data) returns (Data) {}
+}
